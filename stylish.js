@@ -84,7 +84,9 @@ module.exports = function (results) {
 				' potentially fixable with the `--fix` option.\n',
 			].join(''))
 		}
+	} else {
+		output += chalk.green('\u2713 Clean')
 	}
 
-	return total > 0 ? output : ''
+	return output || ''
 }
